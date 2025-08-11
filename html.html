@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CruchyRoll clone">
+    <meta name="keywords" content="HTML, CSS, Javascript">
+    <meta name="author" content="Nissi Sumanth">
+    <link rel="shortcut Icon" type="x-icon" href="./favicon.ico">
+    <title>CruchyRoll - Watch Animes and Anime Movies</title>
+</head>
+
+<body>
+    <div>
+        <div class="navbar d-none d-md-flex">
+            <div class="left-icons">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Crunchyroll_2024.svg/500px-Crunchyroll_2024.svg.png" alt="Crunchyroll Logo">
+                </div>
+                <div class="nav-links">
+                    <a class="text" href="#">New</a>
+                    <a class="text" href="#">Popular</a>
+                    <a class="text" href="#">Simulcast</a>
+                    <div class="nav-item">
+                        <a href="#">Categories▾</a>
+                        <div class="dropdown">
+                            <div class="Drop">
+                                <div class="first-row">
+                                    <a href="#">Browse All (A-Z)</a>
+                                    <a href="#">Release Calendar</a>
+                                    <a href="#">Music Videos & Concerts</a>
+                                </div>
+                                <div class="vertical-line length"></div>
+                                <div class="second-row">
+                                    <div class="heading">Genres</div>
+                                    <div>
+                                        <a href="#">Action</a>
+                                        <a href="#">Adventure</a>
+                                        <a href="#">Comedy</a>
+                                        <a href="#">Drama</a>
+                                        <a href="#">Fantasy</a>
+                                    </div>
+                                </div>
+                                <div class="third-row">
+                                    <a href="#">Music</a>
+                                    <a href="#">Romance</a>
+                                    <a href="#">Sci-Fi</a>
+                                    <a href="#">Seinen</a>
+                                    <a href="#">Shojo</a>
+                                </div>
+                                <div class="third-row">
+                                    <a href="#">Shonen</a>
+                                    <a href="#">Slice of life</a>
+                                    <a href="#">Sports</a>
+                                    <a href="#">Supernatural</a>
+                                    <a href="#">Thriller</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <a class="text" href="#">Games</a>
+                    <div class="nav-item">
+                        <a href="#">News▾</a>
+                        <div class="dropdown second">
+                            <a href="#">All News</a>
+                            <a href="#">Anime Awards</a>
+                            <a href="#">Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-icons">
+                <div class="premium">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39">
+                        <path d="M200-160v-80h560v80H200Zm0-140-51-321q-2 0-4.5.5t-4.5.5q-25 0-42.5-17.5T80-680q0-25 17.5-42.5T140-740q25 0 42.5 17.5T200-680q0 7-1.5 13t-3.5 11l125 56 125-171q-11-8-18-21t-7-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820q0 15-7 28t-18 21l125 171 125-56q-2-5-3.5-11t-1.5-13q0-25 17.5-42.5T820-740q25 0 42.5 17.5T880-680q0 25-17.5 42.5T820-620q-2 0-4.5-.5t-4.5-.5l-51 321H200Z" />
+                    </svg>
+                    <div class="try-premium">
+                        <span class="free">TRY FREE</span>
+                        <span class="text-right">PREMIUM</span>
+                    </div>
+                </div>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                        <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                    </svg></div>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                        <path d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+                    </svg></div>
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                        <path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+                    </svg></div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark d-md-none">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="#">
+                        <img src="https://logos-world.net/wp-content/uploads/2021/02/Crunchyroll-Symbol.png" alt="Crunchyroll" height="28">
+                    </a>
+                </div>
+                <!-- Right icons -->
+                <div class="d-flex align-items-center">
+                    <div class="right-icons">
+                        <div class="premium">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F19E39">
+                                <path d="M200-160v-80h560v80H200Zm0-140-51-321q-2 0-4.5.5t-4.5.5q-25 0-42.5-17.5T80-680q0-25 17.5-42.5T140-740q25 0 42.5 17.5T200-680q0 7-1.5 13t-3.5 11l125 56 125-171q-11-8-18-21t-7-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820q0 15-7 28t-18 21l125 171 125-56q-2-5-3.5-11t-1.5-13q0-25 17.5-42.5T820-740q25 0 42.5 17.5T880-680q0 25-17.5 42.5T820-620q-2 0-4.5-.5t-4.5-.5l-51 321H200Z" />
+                            </svg>
+                        </div>
+                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                                <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                            </svg></div>
+
+                        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                                <path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+                            </svg></div>
+                    </div>
+                </div>
+
+                <!-- Collapsible Menu -->
+                <div class="collapse navbar-collapse" id="mobileNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">New</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Popular</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Simulcast</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main class="container">
+        <div id="animeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="0" class="active">
+                    <div class="progress-bar"></div>
+                </button>
+                <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="1">
+                    <div class="progress-bar"></div>
+                </button>
+                <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="2">
+                    <div class="progress-bar"></div>
+                </button>
+                <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="3">
+                    <div class="progress-bar"></div>
+                </button>
+                <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="4">
+                    <div class="progress-bar"></div>
+                </button>
+                <button type="button" data-bs-target="#animeCarousel" data-bs-slide-to="5">
+                    <div class="progress-bar"></div>
+                </button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <!-- Lord of Mysteries -->
+                <div class="carousel-item active" style="background-image: url('https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/64fbff488d22ec2162135780f31a293e.jpg');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=600/CurationAssets/Lord%20of%20Mysteries/SEASON%201/ULTRA-WIDE/LordOfMysteries-S1C1-KV1-UW-Logo-ENG.png" alt="One Piece" class="anime-logo">
+                            <div class="anime-info">
+                                <span class="rating-badge">U/A 16+</span>
+                                <span>Sub | Dub</span>
+                                <span>Mystery, Psychological</span>
+                            </div>
+                            <p>In a Victorian world of steam, dreadnoughts, and occult horrors, Zhou Mingrui awakens as Klein Moretti...</p>
+                            <div class="btn-group">
+                                <button class="btn-watch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                        <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+                                    </svg>
+                                    START WATCHING S1 E1
+                                </button>
+                                <button class="btn-save">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff640a">
+                                        <path d="M220-150v-597.69Q220-778 241-799q21-21 51.31-21h375.38Q698-820 719-799q21 21 21 51.31V-150L480-261.54 220-150Zm60-92 200-86 200 86v-505.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-242Zm0-518h400-400Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DanDaDan -->
+                <div class="carousel-item" style="background-image: url('https://static.deltiasgaming.com/2025/04/Dandadan-2-5.jpg');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e3a60735-4599-40e1-abbd-4755f199e355/diaeah8-7fdf1e60-e0bc-4bd8-827e-d0b246befeb5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2UzYTYwNzM1LTQ1OTktNDBlMS1hYmJkLTQ3NTVmMTk5ZTM1NVwvZGlhZWFoOC03ZmRmMWU2MC1lMGJjLTRiZDgtODI3ZS1kMGIyNDZiZWZlYjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.EZpQIIqn4k6g7r9snB6ZA9DrcJQ08f5ol_aq7WpK7X4" alt="DanDaDan" class="anime-logo">
+                            <div class="anime-info">
+                                <span class="rating-badge">A</span>
+                                <span>Sub | Dub</span>
+                                <span>Action, Comedy, Supernatural</span>
+                            </div>
+                            <p>Momo and Okarun argue about ghosts and aliens — until they both encounter them for real...</p>
+                            <div class="btn-group">
+                                <button class="btn-watch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                        <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+                                    </svg>
+                                    START WATCHING S2 E1
+                                </button>
+                                <button class="btn-save">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff640a">
+                                        <path d="M220-150v-597.69Q220-778 241-799q21-21 51.31-21h375.38Q698-820 719-799q21 21 21 51.31V-150L480-261.54 220-150Zm60-92 200-86 200 86v-505.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-242Zm0-518h400-400Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Dress-Up Darling -->
+                <div class="carousel-item" style="background-image: url('https://media.sirusgaming.com/wp-content/uploads/2025/07/my-dress-up-darling-season-2-review-3.jpg');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=600/CurationAssets/My%20Dress-Up%20Darling/SEASON%202/ULTRA-WIDE/MyDressUpDarling-S2C1-UW-Logo-ENG.png" alt="My Dress-Up Darling" class="anime-logo">
+                            <div class="anime-info">
+                                <span class="rating-badge">U/A 16+</span>
+                                <span>Sub | Dub</span>
+                                <span>Romance, Slice of Life</span>
+                            </div>
+                            <p>Wakana Gojo’s quiet life changes when Marin discovers his secret passion for doll making...</p>
+                            <div class="btn-group">
+                                <button class="btn-watch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                        <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+                                    </svg>
+                                    START WATCHING S2 E1
+                                </button>
+                                <button class="btn-save">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff640a">
+                                        <path d="M220-150v-597.69Q220-778 241-799q21-21 51.31-21h375.38Q698-820 719-799q21 21 21 51.31V-150L480-261.54 220-150Zm60-92 200-86 200 86v-505.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-242Zm0-518h400-400Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clevatess -->
+                <div class="carousel-item" style="background-image: url('https://animenew.com.br/wp-content/uploads/2024/07/Clevatess-Manga-ganha-adaptacao-para-anime-jpg.webp');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=600/CurationAssets/Clevatess/SEASON%201/ULTRA-WIDE/Clevatess-S1C1-KV1-(Teaser)-UW-Logo-ENG.png" alt="Clevatess" class="anime-logo">
+                            <div class="anime-info">
+                                <span class="rating-badge">U/A 16+</span>
+                                <span>Sub | Dub</span>
+                                <span>Fantasy, Action</span>
+                            </div>
+                            <p>A legendary knight rises against forces of darkness in a battle that will decide kingdoms...</p>
+                            <div class="btn-group">
+                                <button class="btn-watch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                        <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+                                    </svg>
+                                    START WATCHING S1 E1
+                                </button>
+                                <button class="btn-save">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff640a">
+                                        <path d="M220-150v-597.69Q220-778 241-799q21-21 51.31-21h375.38Q698-820 719-799q21 21 21 51.31V-150L480-261.54 220-150Zm60-92 200-86 200 86v-505.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-242Zm0-518h400-400Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kaiju No. 8 -->
+                <div class="carousel-item" style="background-image: url('https://m.media-amazon.com/images/S/pv-target-images/0e494b27d7e3dac7a39652bb4dab8550d4dc1a62b86b219ce9200017365f539b._SX1080_FMjpg_.jpg');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=600/CurationAssets/Kaiju%20No.%208/SEASON%202/ULTRA-WIDE/KaijuNo8-S2C1-UW-Logo-ENG.png" alt="Kaiju No. 8" class="anime-logo">
+                            <div class="anime-info">
+                                <span class="rating-badge">U/A 16+</span>
+                                <span>Sub | Dub</span>
+                                <span>Action, Sci-Fi</span>
+                            </div>
+                            <p>Kafka Hibino gains the ability to transform into a kaiju, fighting monsters to protect humanity...</p>
+                            <div class="btn-group">
+                                <button class="btn-watch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                        <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+                                    </svg>
+                                    START WATCHING S1 E1
+                                </button>
+                                <button class="btn-save">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff640a">
+                                        <path d="M220-150v-597.69Q220-778 241-799q21-21 51.31-21h375.38Q698-820 719-799q21 21 21 51.31V-150L480-261.54 220-150Zm60-92 200-86 200 86v-505.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-242Zm0-518h400-400Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaghiakuya -->
+                <div class="carousel-item" style="background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2025/06/kv.jpg');">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=600/CurationAssets/Gachiakuta/SEASON%201/ULTRA-WIDE/Gachiakuta-S1C1-KV1-UW-Logo-ENG.png" alt="Gaghiakuya" class="anime-logo">
+                            <div class="anime-info">
+                                <span class="rating-badge">U/A 16+</span>
+                                <span>Sub | Dub</span>
+                                <span>Thriller, Action</span>
+                            </div>
+                            <p>In a city plagued by corruption, a lone fighter rises to expose the truth and challenge the system...</p>
+                            <div class="btn-group">
+                                <button class="btn-watch">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                        <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+                                    </svg>
+                                    START WATCHING S1 E1
+                                </button>
+                                <button class="btn-save">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff640a">
+                                        <path d="M220-150v-597.69Q220-778 241-799q21-21 51.31-21h375.38Q698-820 719-799q21 21 21 51.31V-150L480-261.54 220-150Zm60-92 200-86 200 86v-505.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-242Zm0-518h400-400Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#animeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#animeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </main>
+
+    <section class="sampler">
+        <h2 class="sampler-heading">July 2025 Seasonal Sampler</h2>
+        <p class="sub-heading">Check out the first few episodes of these new shows for free!</p>
+
+        <div class="carousel-container">
+            <button class="arrow left" id="prevBtn">&#10094;</button>
+
+            <div class="carousel-container">
+                <button class="arrow left" id="prevBtn">&#10094;</button>
+
+                <div class="carousel" id="carousel">
+                    <div class="anime-card">
+                        <img src="https://a.storyblok.com/f/178900/1765x2500/ad843ae3f8/clevatess-kv-3.png/m/filters:quality(95)format(webp)" alt="Clevatess">
+                        <h3>Clevatess</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMWE1ZWYwZGUtZjRmOS00NzUzLTlkZmUtMTEwMjNhNTVmNDIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Lord of Mysteries">
+                        <h3>Lord of Mysteries</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BN2QyZTE1YzYtYmFkYy00NGQ5LWFiMGQtODdkZWNmNGQ0YTQ4XkEyXkFqcGc@._V1_.jpg" alt="Detectives">
+                        <h3>Detectives These Days Are Crazy!</h3>
+                        <p>Subtitled</p>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMGI0NzU4Y2UtYzQwNS00YzdhLTk4YjctYmM5NTZmMDRlM2JiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="New Saga">
+                        <h3>New Saga</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjg1OWNmODUtOTk1MS00NmYzLWEzODUtYWQxM2JmM2VkZmQ0XkEyXkFqcGc@._V1_.jpg" alt="Onmyo Kaitan">
+                        <h3>Onmyo Kaitan Re:Birth Verse</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://a.storyblok.com/f/178900/1000x1463/6328934579/dan-da-dan-evil-eye.jpg/m/filters:quality(95)format(webp)" alt="Dandadan">
+                        <h3>Dandadan</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://a.storyblok.com/f/178900/750x1060/dcece0cdde/kaiju-no-8-season-2-key-visual.jpg/m/filters:quality(95)format(webp)" alt="Kaiju No. 8">
+                        <h3>Kaiju No. 8</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1064x1596/537892a7ad/my-dress-up-darling-season-2-key-art.png/m/filters:quality(95)format(webp)" alt="My Dress-Up Darling">
+                        <h3>My Dress-Up Darling</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOGJlZmZmOGYtNWJjNy00ZDI1LThmZGEtYjk3ZmExNzVhMjMwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Water Magician">
+                        <h3>The Water Magician</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://a.storyblok.com/f/178900/750x1061/923d3e59fe/secrets_of_the_silent_witch_teaser_art.jpg/m/filters:quality(95)format(webp)" alt="Secrets of the Silent Witch">
+                        <h3>Secrets of the Silent Witch</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://a.storyblok.com/f/178900/750x1061/84f88900eb/kamitsubaki_city_under_construction_teaser_art.jpg/m/filters:quality(95)format(webp)" alt="KAMITSUBAKI CITY UNDER CONSTRUCTION">
+                        <h3>KAMITSUBAKI CITY UNDER CONSTRUCTION</h3>
+                        <p>Subtitled</p>
+                    </div>
+                    <div class="anime-card"><img src="https://a.storyblok.com/f/178900/712x1000/49a92edac6/watarikuns_is_about_to_collapse_teaser_art.jpg/m/filters:quality(95)format(webp)" alt="Watari-kun's ****** Is about to Collapse">
+                        <h3>Watari-kun's ****** Is about to Collapse</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BOTZlYjc3ZjUtYjU5Ni00NWFlLWI1MjUtODcyMGM1MGJiMDg3XkEyXkFqcGc@._V1_.jpg" alt="Scooped Up by an S-Rank Adventurer!">
+                        <h3>Scooped Up by an S-Rank Adventurer!</h3>
+                        <p>Subtitled</p>
+                    </div>
+                    <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BZmQwMmEyYmMtZTFmNS00NDc5LThmYzEtNmIxNDJmYzRhMmRmXkEyXkFqcGc@._V1_.jpg" alt="The Shy Hero and the Assassin Princesses">
+                        <h3>The Shy Hero and the Assassin Princesses</h3>
+                        <p>Subtitled</p>
+                    </div>
+                    <div class="anime-card"><img src="https://a.storyblok.com/f/178900/846x1199/45abd4a200/with-you-and-the-rain-anime-winter-visual.jpg/m/filters:quality(95)format(webp)" alt="With You and the Rain">
+                        <h3>With You and the Rain</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BODE2MzBiYWUtOTIyZC00OWQ4LThlODQtMjA3Njc0ZTBkYjM4XkEyXkFqcGc@._V1_.jpg" alt="Cultural Exchange with a Game Centre Girl">
+                        <h3>Cultural Exchange with a Game Centre Girl</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BMGQ1ZDEwOGMtNDBiNi00NzcwLThiMmUtNGNlZGI3NTYwMWRhXkEyXkFqcGc@._V1_.jpg" alt="Apocalypse Bringer Mynoghra: World Conquest Starts with the Civilization of Ruin">
+                        <h3>Apocalypse Bringer Mynoghra: World Conquest Starts with the Civilization of Ruin</h3>
+                        <p>Subtitled</p>
+                    </div>
+                    <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BMzE5MDU3YjMtZjk5Yi00YTFlLThmMGQtOGI2ODZlNzJlMTg2XkEyXkFqcGc@._V1_.jpg" alt="TOUGEN ANKI">
+                        <h3>TOUGEN ANKI</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BZDU5ZmEzODYtMDU2OS00NTZiLTk4MWYtYWUyZWUzNGU2ODdjXkEyXkFqcGc@._V1_.jpg" alt="Gachiakuta">
+                        <h3>Gachiakuta</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                    <div class="anime-card"><img src="https://images.justwatch.com/poster/332590914/s718/dekin-no-mogura-the-earthbound-mole.jpg" alt="Dekin no Mogura: The Earthbound Mole">
+                        <h3>Dekin no Mogura: The Earthbound Mole</h3>
+                        <p>Sub | Dub</p>
+                    </div>
+                </div>
+
+                <button class="arrow right" id="nextBtn">&#10095;</button>
+            </div>
+
+            <button class="arrow right" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <div class="trial-banner">
+        <div class="banner-left">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a0a4547a-06c5-4740-b87a-ca9c4fa0171e/dduaesk-2b3e85d2-3116-4eb5-8260-f413d1fc670e.png/v1/fill/w_894,h_894,q_70,strp/crunchyroll_logo_by_maxgle_dduaesk-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAwMCIsInBhdGgiOiJcL2ZcL2EwYTQ1NDdhLTA2YzUtNDc0MC1iODdhLWNhOWM0ZmEwMTcxZVwvZGR1YWVzay0yYjNlODVkMi0zMTE2LTRlYjUtODI2MC1mNDEzZDFmYzY3MGUucG5nIiwid2lkdGgiOiI8PTEwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.RwqVQi-GWYTyusshmcEUZnqss0p-W_17YiH_GgU8J2I" alt="Crunchyroll Logo" class="banner-logo">
+            <div class="banner-text">
+                <h2>Crunchyroll: Watch Anime Anytime, Anywhere</h2>
+                <p>Get all anime and games ad-free, plus download content! Try it free for 7 days. Cancel anytime.</p>
+            </div>
+        </div>
+        <div class="banner-right">
+            <button class="trial-btn">START FREE TRIAL</button>
+        </div>
+    </div>
+
+    <section class="sampler">
+        <h2 class="sampler-heading">Kickstart Your Anime Journey</h2>
+
+        <div class="carousel-container">
+            <button class="arrow left" id="prevBtn">&#10094;</button>
+
+            <div class="carousel" id="carousel">
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1765x2500/ad843ae3f8/clevatess-kv-3.png/m/filters:quality(95)format(webp)" alt="Clevatess">
+                    <h3>Clevatess</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://resizing.flixster.com/b_iMzsB6inR_e8s0Wl1_JI1OSi4=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vMDBmODc2YTEtY2Y5Ny00NWJkLTliMTEtMTY3NjE5MWIyM2ZlLnBuZw==" alt="Chainsaw Man">
+                    <h3>Chainsaw Man</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZmZkZjNhMWMtM2U0Mi00MjdlLTk3NmMtMTMwZjgwOTJmODMzXkEyXkFqcGc@._V1_.jpg" alt="Black Clover">
+                    <h3>Black Clover</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/01ec367b44f0a568430a957e042639af.jpg" alt="Naruto Shippuden">
+                    <h3>Naruto Shippuden</h3>
+                    <p>Subtitled</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOWQwOWY5NTUtMjAyZi00YjQzLTkwODgtNmQwZjU1MGIzZDhjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Bleach">
+                    <h3>Bleach</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Dandadan_KV.png" alt="Dandadan">
+                    <h3>Dandadan</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/900x1200/e66b44ef56/mha-s7-kv.jpeg/m/filters:quality(95)format(webp)" alt="My Hero Academia">
+                    <h3>My Hero Academia</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1061x1500/5a05a2792f/shangri-la-frontier-season-2-key-visual.jpg/m/filters:quality(95)format(webp)" alt="Shangri La Frontier">
+                    <h3>shangri la frontier</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/650x939/e53395e696/sxf_kv4.jpeg/m/filters:quality(95)format(webp)" alt="SPY X FAMILY">
+                    <h3>SPY X FAMILY</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/640x960/97d1d6541b/bec69c5ba15064ff88a30d7481573ee91475335715_full.jpg/m/640x960" alt="Fullmetal Alchemist">
+                    <h3>Fullmetal Alchemist</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/8532171bec0d05bfe45769a330fbab82.jpg" alt="Naruto">
+                    <h3>Naruto</h3>
+                    <p>Dubbed</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1280x1809/7f68d0c0df/frieren-beyond-journey-s-end-second-visual.jpg/m/filters:quality(95)format(webp)" alt="Frieren: Beyond Journey's End">
+                    <h3>Frieren: Beyond Journey's End</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1448x2048/fded7ae04c/35c60f741a4194db246c5c9b95fd4cd61679139956_main.jpg/m/filters:quality(95)format(webp)" alt="Mashle: Magic And Muscles">
+                    <h3>Mashle: Magic And Muscles</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/772x1080/34ddec2ec6/4677d6443c2be7a99c0b8f53f3819d921658315132_main.png/m/filters:quality(95)format(webp)" alt="The Daily Life of the Immortal King">
+                    <h3>The Daily Life of the Immortal King</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/517x779/c217961e21/solo-leveling-reawakening-en-kv.jpg/m/filters:quality(95)format(webp)" alt="Solo Leveling">
+                    <h3>Solo Leveling</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/850x1199/eb44aedf46/0e516cb58678f6ca0a5b0b79d21136901639732884_main.jpg/m/filters:quality(95)format(webp)" alt="Overlord">
+                    <h3>Overlord</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/960x1440/13b507ce00/that-time-i-got-reincarnated-as-a-slime-season-3-base-assets-2x3.png/m/filters:quality(95)format(webp)" alt="That Time i Got Reincarnated as a Slime">
+                    <h3>That Time i Got Reincarnated as a Slime</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/750x1060/dcece0cdde/kaiju-no-8-season-2-key-visual.jpg/m/filters:quality(95)format(webp)" alt="Kaiju No. 8">
+                    <h3>Kaiju No. 8</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BZDU5ZmEzODYtMDU2OS00NTZiLTk4MWYtYWUyZWUzNGU2ODdjXkEyXkFqcGc@._V1_.jpg" alt="Gachiakuta">
+                    <h3>Gachiakuta</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMWE1ZWYwZGUtZjRmOS00NzUzLTlkZmUtMTEwMjNhNTVmNDIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Lord of Mysteries">
+                    <h3>Lord of Mysteries</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1000x1419/db446357ef/the-rising-of-the-shield-hero-season-4-visual.jpg/m/filters:quality(95)format(webp)" alt="The Rising of the Shield Hero">
+                    <h3>The Rising of the Shield Hero</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/750x1062/a483861f1e/horimiya-kv.jpeg/m/filters:quality(95)format(webp)" alt="Horimiya">
+                    <h3>Horimiya</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpg" alt="JUJUTSU KAISEN">
+                    <h3>JUJUTSU KAISEN</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1504/c7214069da/blue-lock-season-2-key-visual.png/m/filters:quality(95)format(webp)" alt="BLUE LOCK">
+                    <h3>BLUE LOCK</h3>
+                    <p>Sub | Dub</p>
+                </div>
+            </div>
+
+            <button class="arrow right" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="sampler">
+        <h2 class="sampler-heading">Popular Near You</h2>
+        <p class="sub-heading">Animes that are buzzing in your vicinity</p>
+
+        <div class="carousel-container">
+            <button class="arrow left" id="prevBtn">&#10094;</button>
+
+            <div class="carousel" id="carousel">
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1765x2500/ad843ae3f8/clevatess-kv-3.png/m/filters:quality(95)format(webp)" alt="Clevatess">
+                    <h3>Clevatess</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://eczisd5ctbt.exactdn.com/wordpress/wp-content/uploads/Dr.-STONE-NEW-WORLD-Key-Visual-2x3-1-jpg.webp?strip=all&lossy=0&ssl=1" alt="Dr. STONE">
+                    <h3>Dr. STONE</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZmZkZjNhMWMtM2U0Mi00MjdlLTk3NmMtMTMwZjgwOTJmODMzXkEyXkFqcGc@._V1_.jpg" alt="Black Clover">
+                    <h3>Black Clover</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/01ec367b44f0a568430a957e042639af.jpg" alt="Naruto Shippuden">
+                    <h3>Naruto Shippuden</h3>
+                    <p>Subtitled</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOWQwOWY5NTUtMjAyZi00YjQzLTkwODgtNmQwZjU1MGIzZDhjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Bleach">
+                    <h3>Bleach</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/08c0e10608/demon-slayer-kimetsu-no-yaiba-hashira-training-arc-kv.jpg/m/filters:quality(95)format(webp)" alt="Demon Slayer: Kimetsu no Yaiba">
+                    <h3>Demon Slayer: Kimetsu no Yaiba</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/900x1200/e66b44ef56/mha-s7-kv.jpeg/m/filters:quality(95)format(webp)" alt="My Hero Academia">
+                    <h3>My Hero Academia</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/569x800/a9fdc8853d/8f8f18330e4e79a06901399f538d09271597587078_main.jpg/m/filters:quality(95)format(webp)" alt="Haikyu!!">
+                    <h3>Haikyu!!</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/7f6315794cec689a8ec5ff695788ea99.jpg" alt="A Couple of Cuckoos">
+                    <h3>A Couple of Cuckoos</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMGI0NzU4Y2UtYzQwNS00YzdhLTk4YjctYmM5NTZmMDRlM2JiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="New Saga">
+                    <h3>New Saga</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/8532171bec0d05bfe45769a330fbab82.jpg" alt="Naruto">
+                    <h3>Naruto</h3>
+                    <p>Dubbed</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1280x1809/7f68d0c0df/frieren-beyond-journey-s-end-second-visual.jpg/m/filters:quality(95)format(webp)" alt="Frieren: Beyond Journey's End">
+                    <h3>Frieren: Beyond Journey's End</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1448x2048/fded7ae04c/35c60f741a4194db246c5c9b95fd4cd61679139956_main.jpg/m/filters:quality(95)format(webp)" alt="Mashle: Magic And Muscles">
+                    <h3>Mashle: Magic And Muscles</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/772x1080/34ddec2ec6/4677d6443c2be7a99c0b8f53f3819d921658315132_main.png/m/filters:quality(95)format(webp)" alt="The Daily Life of the Immortal King">
+                    <h3>The Daily Life of the Immortal King</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/517x779/c217961e21/solo-leveling-reawakening-en-kv.jpg/m/filters:quality(95)format(webp)" alt="Solo Leveling">
+                    <h3>Solo Leveling</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/850x1199/eb44aedf46/0e516cb58678f6ca0a5b0b79d21136901639732884_main.jpg/m/filters:quality(95)format(webp)" alt="Overlord">
+                    <h3>Overlord</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/960x1440/13b507ce00/that-time-i-got-reincarnated-as-a-slime-season-3-base-assets-2x3.png/m/filters:quality(95)format(webp)" alt="That Time i Got Reincarnated as a Slime">
+                    <h3>That Time i Got Reincarnated as a Slime</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/750x1060/dcece0cdde/kaiju-no-8-season-2-key-visual.jpg/m/filters:quality(95)format(webp)" alt="Kaiju No. 8">
+                    <h3>Kaiju No. 8</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BZDU5ZmEzODYtMDU2OS00NTZiLTk4MWYtYWUyZWUzNGU2ODdjXkEyXkFqcGc@._V1_.jpg" alt="Gachiakuta">
+                    <h3>Gachiakuta</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMWE1ZWYwZGUtZjRmOS00NzUzLTlkZmUtMTEwMjNhNTVmNDIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Lord of Mysteries">
+                    <h3>Lord of Mysteries</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1000x1419/db446357ef/the-rising-of-the-shield-hero-season-4-visual.jpg/m/filters:quality(95)format(webp)" alt="The Rising of the Shield Hero">
+                    <h3>The Rising of the Shield Hero</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/800x1131/e90fa320d7/wind-breaker-2nd-kv.jpg/m/filters:quality(95)format(webp)" alt="WIND BREAKER">
+                    <h3>WIND BREAKER</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpg" alt="JUJUTSU KAISEN">
+                    <h3>JUJUTSU KAISEN</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1504/c7214069da/blue-lock-season-2-key-visual.png/m/filters:quality(95)format(webp)" alt="BLUE LOCK">
+                    <h3>BLUE LOCK</h3>
+                    <p>Sub | Dub</p>
+                </div>
+            </div>
+
+            <button class="arrow right" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="episodes-section">
+        <div class="section-header">
+            <div class="section-title">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                    <path d="m380-300 280-180-280-180v360ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z" />
+                </svg>
+                <h2>New Episodes</h2>
+            </div>
+            <a href="#" class="calendar-link">View Release Calendar &gt;</a>
+        </div>
+        <h1 class="episode-heading">Today</h1>
+        <hr class="custom-line">
+        <div class="episode-grid">
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/dc4c184b9024ca6b36863eff028a2a5c.jpg" alt="New Saga" />
+                </div>
+                <div class="episode-details">
+                    <div class="title">(Dub) New Saga</div>
+                    <div class="meta">5 Episodes<br><span>Sub | Dub</span></div>
+                    <div class="time">3:30am</div>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/0d2ef03e553960bc16bc2853da20458c.jpg" alt="7th Prince" />
+                </div>
+                <div class="episode-details">
+                    <div class="title"> (Dub) I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability(English Dub)</div>
+                    <div class="meta">👑 Episode 15<br><span>Sub | Dub</span></div>
+                    <div class="time">1:30am</div>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/4e6d92a8a40b7028011b9692c974aa65.jpg" alt="Vending Machine" />
+                </div>
+                <div class="episode-details">
+                    <div class="title">(Dub) Reborn as a Vending Machine, I Now Wander The Dungeon</div>
+                    <div class="meta">5 Episodes<br><span>Sub | Dub</span></div>
+                    <div class="time">12:30am</div>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://a.storyblok.com/f/178900/1920x1080/5212fc907e/onmyo-kaiten-rebirth-verse-key-visual-wide.png/m/1200x0/filters:quality(95)format(webp)" alt="Onmyo Kaiten" />
+                </div>
+                <div class="episode-details">
+                    <div class="title">(Dub) Onmyo Kaiten Re:Birth Verse (English Dub)</div>
+                    <div class="meta">👑 Episode 4<br><span>Sub | Dub</span></div>
+                    <div class="time">2:00am</div>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/003e90d1aabf7d07e31f9f8245d5bd7d.jpg" alt="Mikadono Sisters" />
+                </div>
+                <div class="episode-details">
+                    <div class="title">(Dub) Dealing with Mikadono Sisters Is a Breeze</div>
+                    <div class="meta">3 Episodes<br><span>Sub | Dub</span></div>
+                    <div class="time">1:00am</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="episodes-section">
+        <div class="section-header">
+            <div class="section-title">
+                <h1 class="episode-heading">Yesterday</h1>
+            </div>
+        </div>
+        <hr class="custom-line">
+        <div class="episode-grid">
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/dc4c184b9024ca6b36863eff028a2a5c.jpg" alt="New Saga" />
+                </div>
+                <div class="episode-details">
+                    <div class="title">New Saga</div>
+                    <div class="meta">👑 Episode 6<br><span>Subtitled</span></div>
+                    <div class="time">11:30pm</div>
+                </div>
+            </div>
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://a.storyblok.com/f/178900/1920x1080/5212fc907e/onmyo-kaiten-rebirth-verse-key-visual-wide.png/m/1200x0/filters:quality(95)format(webp)" alt="Onmyo Kaiten" />
+                </div>
+                <div class="episode-details">
+                    <div class="title">Onmyo Kaiten Re:Birth Verse</div>
+                    <div class="meta">👑 Episode 6<br><span>Subtitled</span></div>
+                    <div class="time">10:55pm</div>
+                </div>
+            </div>
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/003e90d1aabf7d07e31f9f8245d5bd7d.jpg" alt="Mikadono Sisters" />
+                </div>
+                <div class="episode-details">
+                    <div class="title">Dealing with Mikadono Sisters Is a Breeze</div>
+                    <div class="meta">👑 Episode 6<br><span>Subtitled</span></div>
+                    <div class="time">10:30pm</div>
+                </div>
+            </div>
+            <div class="episode-card">
+                <div class="thumb-stack">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/0d2ef03e553960bc16bc2853da20458c.jpg" alt="7th Prince" />
+                </div>
+                <div class="episode-details">
+                    <div class="title">I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability(English Dub)</div>
+                    <div class="meta">👑 Episode 15<br><span>Subtitled</span></div>
+                    <div class="time">10:00pm</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="show-more-container">
+        <div class="show-more-bar">SHOW MORE</div>
+    </div>
+
+    <div class="show-more-container">
+        <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=2700/CurationAssets/Takopi's%20Original%20Sin/SEASON%201/MARKETING%20BANNER/TakopisOriginalSin-S1C1-KV1-Banner-2100x700-EN.png" class="takop-image" />
+    </div>
+
+    <div class="anime-feature">
+        <div class="anime-image">
+            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/548c51dae7f89955eadaf9f9ce79359b.jpg" alt="Rent-a-Girlfriend Poster">
+        </div>
+        <div class="anime-details">
+            <h2>Rent-a-Girlfriend</h2>
+            <p class="sub-info">Sub | Dub</p>
+            <p class="description">
+                Kinoshita Kazuya is a 20-year-old failure of a college student. He managed to kiss his girlfriend once,
+                but was dumped after a month.....
+            </p>
+            <div class="anime-buttons">
+                <button class="watch-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                        <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+                    </svg>
+                    START WATCHING S1 E1
+                </button>
+                <button class="watchlist-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff640a">
+                        <path d="M220-150v-597.69Q220-778 241-799q21-21 51.31-21h375.38Q698-820 719-799q21 21 21 51.31V-150L480-261.54 220-150Zm60-92 200-86 200 86v-505.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-242Zm0-518h400-400Z" />
+                    </svg>
+                    ADD TO WATCHLIST
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section class="sampler">
+        <h2 class="sampler-heading">Free Hindi Dubbed Anime</h2>
+        <p class="sub-heading">Check out these great Hindi dubs!</p>
+
+        <div class="carousel-container">
+            <button class="arrow left" id="prevBtn">&#10094;</button>
+
+            <div class="carousel" id="carousel">
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMzgwYThmYjktMmNiNS00Njc4LTg3ZTAtYmNmYWU5OWE5YmI3XkEyXkFqcGc@._V1_.jpg" alt="Akuduma Drive">
+                    <h3>Akuduma Drive</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/974x1400/b32b95c003/bucchigiri-kv1.jpeg/m/filters:quality(95)format(webp)" alt="BUCCHIGIRI?!">
+                    <h3>BUCCHIGIRI?!</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://resizing.flixster.com/b_iMzsB6inR_e8s0Wl1_JI1OSi4=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vMDBmODc2YTEtY2Y5Ny00NWJkLTliMTEtMTY3NjE5MWIyM2ZlLnBuZw==" alt="Chainsaw Man">
+                    <h3>Chainsaw Man</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Dandadan_KV.png" alt="Dandadan">
+                    <h3>Dandadan</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://eczisd5ctbt.exactdn.com/wordpress/wp-content/uploads/Dr.-STONE-NEW-WORLD-Key-Visual-2x3-1-jpg.webp?strip=all&lossy=0&ssl=1" alt="Dr. STONE">
+                    <h3>Dr. STONE</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/7394dd442d/fire-force-season-3-key-art.png/m/filters:quality(95)format(webp)" alt="Fire Force">
+                    <h3>Fire Force</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x1800/catalog/crunchyroll/1500ddfac4a1ffbc767603fcac1b9b2a.jpg" alt="Ranking of Kings">
+                    <h3>Ranking of Kings</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2024/09/rurouni-kenshin-kyoto-disturbance-new-key-visual-1.jpg?resize=350%2C495&ssl=1" alt="Rurouni Kenshin">
+                    <h3>Rurouni Kenshin</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/08c0e10608/demon-slayer-kimetsu-no-yaiba-hashira-training-arc-kv.jpg/m/filters:quality(95)format(webp)" alt="Demon Slayer: Kimetsu no Yaiba">
+                    <h3>Demon Slayer: Kimetsu no Yaiba</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1061x1500/5a05a2792f/shangri-la-frontier-season-2-key-visual.jpg/m/filters:quality(95)format(webp)" alt="Shangri La Frontier">
+                    <h3>shangri la frontier</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/650x939/e53395e696/sxf_kv4.jpeg/m/filters:quality(95)format(webp)" alt="SPY X FAMILY">
+                    <h3>SPY X FAMILY</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1280x1809/7f68d0c0df/frieren-beyond-journey-s-end-second-visual.jpg/m/filters:quality(95)format(webp)" alt="Frieren: Beyond Journey's End">
+                    <h3>Frieren: Beyond Journey's End</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1448x2048/fded7ae04c/35c60f741a4194db246c5c9b95fd4cd61679139956_main.jpg/m/filters:quality(95)format(webp)" alt="Mashle: Magic And Muscles">
+                    <h3>Mashle: Magic And Muscles</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/772x1080/34ddec2ec6/4677d6443c2be7a99c0b8f53f3819d921658315132_main.png/m/filters:quality(95)format(webp)" alt="The Daily Life of the Immortal King">
+                    <h3>The Daily Life of the Immortal King</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/517x779/c217961e21/solo-leveling-reawakening-en-kv.jpg/m/filters:quality(95)format(webp)" alt="Solo Leveling">
+                    <h3>Solo Leveling</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BZjQ2MGYyYzgtODlhZi00YjczLWJmZTEtYzIxYWM1NTQ4ZGFlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Reborn as a Vending Machine, I Now Wander The Dungeon">
+                    <h3>Reborn as a Vending Machine, I Now Wander The Dungeon</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/960x1440/13b507ce00/that-time-i-got-reincarnated-as-a-slime-season-3-base-assets-2x3.png/m/filters:quality(95)format(webp)" alt="That Time i Got Reincarnated as a Slime">
+                    <h3>That Time i Got Reincarnated as a Slime</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1200x1696/3a62b9cb01/tower-of-god-season-2-cour-2-key-visual.jpg/m/filters:quality(95)format(webp)" alt="Tower of God">
+                    <h3>Tower of God</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1505/08057613cb/66e3b2a6c5f4c45b9ba2126d98733bcc1666578842_main.png/m/filters:quality(95)format(webp)" alt="Vinland Saga">
+                    <h3>Vinland Saga</h3>
+                    <p>Sub | Dub</p>
+                </div>
+
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/fb327f6af0/mushoku-tensei-season-2-key-visual.png/m/filters:quality(95)format(webp)" alt="Mushoku Tensei: Jobless Reincarnation">
+                    <h3>Mushoku Tensei: Jobless Reincarnation</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/640x913/ae7f5644c1/2713d54c9ce2391a84a8279dae7fda771568744491_full.png/m/640x913" alt="RADIANT">
+                    <h3>RADIANT</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/640x960/ed4c7923b1/a96ce015585aae6fc5f9c9250f0a98411467046966_full.png/m/640x960" alt="ReLIFE">
+                    <h3>ReLIFE</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/905ea6e912/the-apothecary-diaries-season-2-key-art.png/m/filters:quality(95)format(webp)" alt="The Apothecary Diaries">
+                    <h3>The Apothecary Diaries</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/800x1131/e90fa320d7/wind-breaker-2nd-kv.jpg/m/filters:quality(95)format(webp)" alt="WIND BREAKER">
+                    <h3>WIND BREAKER</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1920x2687/e24523e95a/63e4d3e1ca12ba34424fa543921552931642154045_main.jpg/m/filters:quality(95)format(webp)" alt="The Case Study of Vanitas">
+                    <h3>The Case Study of Vanitas</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/640x960/4ac42416d3/the-great-cleric-key-visual.png/m/filters:quality(95)format(webp)" alt="The Great Cleric">
+                    <h3>The Great Cleric</h3>
+                    <p>Sub | Dub</p>
+                </div>
+            </div>
+
+            <button class="arrow right" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="sampler">
+        <h2 class="sampler-heading">Popular English Dubbed Anime</h2>
+
+        <div class="carousel-container">
+            <button class="arrow left" id="prevBtn">&#10094;</button>
+
+            <div class="carousel" id="carousel">
+                <div class="anime-card">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/one-piece-nueva-temporada-egghead-la-isla-del-futuro-1-6592b3391269b.jpg?resize=980:*" alt="One Piece">
+                    <h3>One Piece</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://eczisd5ctbt.exactdn.com/wordpress/wp-content/uploads/Dr.-STONE-NEW-WORLD-Key-Visual-2x3-1-jpg.webp?strip=all&lossy=0&ssl=1" alt="Dr. STONE">
+                    <h3>Dr. STONE</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Dandadan_KV.png" alt="Dandadan">
+                    <h3>Dandadan</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZmZkZjNhMWMtM2U0Mi00MjdlLTk3NmMtMTMwZjgwOTJmODMzXkEyXkFqcGc@._V1_.jpg" alt="Black Clover">
+                    <h3>Black Clover</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/98ea4207e23a2ea3e3af39ad641d8800.jpg" alt="Dragon Ball Super">
+                    <h3>Dragon Ball Super</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/974x1400/b32b95c003/bucchigiri-kv1.jpeg/m/filters:quality(95)format(webp)" alt="BUCCHIGIRI?!">
+                    <h3>BUCCHIGIRI?!</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://resizing.flixster.com/b_iMzsB6inR_e8s0Wl1_JI1OSi4=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vMDBmODc2YTEtY2Y5Ny00NWJkLTliMTEtMTY3NjE5MWIyM2ZlLnBuZw==" alt="Chainsaw Man">
+                    <h3>Chainsaw Man</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/640x960/97d1d6541b/bec69c5ba15064ff88a30d7481573ee91475335715_full.jpg/m/640x960" alt="Fullmetal Alchemist">
+                    <h3>Fullmetal Alchemist</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/01ec367b44f0a568430a957e042639af.jpg" alt="Naruto Shippuden">
+                    <h3>Naruto Shippuden</h3>
+                    <p>Subtitled</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/08c0e10608/demon-slayer-kimetsu-no-yaiba-hashira-training-arc-kv.jpg/m/filters:quality(95)format(webp)" alt="Demon Slayer: Kimetsu no Yaiba">
+                    <h3>Demon Slayer: Kimetsu no Yaiba</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/900x1200/e66b44ef56/mha-s7-kv.jpeg/m/filters:quality(95)format(webp)" alt="My Hero Academia">
+                    <h3>My Hero Academia</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/569x800/a9fdc8853d/8f8f18330e4e79a06901399f538d09271597587078_main.jpg/m/filters:quality(95)format(webp)" alt="Haikyu!!">
+                    <h3>Haikyu!!</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/7f6315794cec689a8ec5ff695788ea99.jpg" alt="A Couple of Cuckoos">
+                    <h3>A Couple of Cuckoos</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/640x960/566ed42091/3b1b6e977fd38837c005c68b739564701500588647_full.jpg/m/640x960" alt="Code Geass">
+                    <h3>Code Geass</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/8532171bec0d05bfe45769a330fbab82.jpg" alt="Naruto">
+                    <h3>Naruto</h3>
+                    <p>Dubbed</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1280x1809/7f68d0c0df/frieren-beyond-journey-s-end-second-visual.jpg/m/filters:quality(95)format(webp)" alt="Frieren: Beyond Journey's End">
+                    <h3>Frieren: Beyond Journey's End</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1448x2048/fded7ae04c/35c60f741a4194db246c5c9b95fd4cd61679139956_main.jpg/m/filters:quality(95)format(webp)" alt="Mashle: Magic And Muscles">
+                    <h3>Mashle: Magic And Muscles</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/772x1080/34ddec2ec6/4677d6443c2be7a99c0b8f53f3819d921658315132_main.png/m/filters:quality(95)format(webp)" alt="The Daily Life of the Immortal King">
+                    <h3>The Daily Life of the Immortal King</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/517x779/c217961e21/solo-leveling-reawakening-en-kv.jpg/m/filters:quality(95)format(webp)" alt="Solo Leveling">
+                    <h3>Solo Leveling</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BYWNlYzk1NGQtNTZkNi00YzJiLWJkMWUtZTYzNjI3YTc5ZDRhXkEyXkFqcGc@._V1_.jpg" alt="DARLING in the FRANXX">
+                    <h3>DARLING in the FRANXX</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/960x1440/13b507ce00/that-time-i-got-reincarnated-as-a-slime-season-3-base-assets-2x3.png/m/filters:quality(95)format(webp)" alt="That Time i Got Reincarnated as a Slime">
+                    <h3>That Time i Got Reincarnated as a Slime</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/4fadd5f113c28de1b22d4ef67a78890b.jpg" alt="Gintama">
+                    <h3>Gintama</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://m.media-amazon.com/images/M/MV5BZDU5ZmEzODYtMDU2OS00NTZiLTk4MWYtYWUyZWUzNGU2ODdjXkEyXkFqcGc@._V1_.jpg" alt="Gachiakuta">
+                    <h3>Gachiakuta</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/c8833b0022/classroom-of-the-elite-season-3-key-art-tall.png/m/filters:quality(95)format(webp)" alt="Classroom of the Elite">
+                    <h3>Classroom of the Elite</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/7394dd442d/fire-force-season-3-key-art.png/m/filters:quality(95)format(webp)" alt="Fire Force">
+                    <h3>Fire Force</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/750x1062/a483861f1e/horimiya-kv.jpeg/m/filters:quality(95)format(webp)" alt="Horimiya">
+                    <h3>Horimiya</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1000x1419/db446357ef/the-rising-of-the-shield-hero-season-4-visual.jpg/m/filters:quality(95)format(webp)" alt="The Rising of the Shield Hero">
+                    <h3>The Rising of the Shield Hero</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/800x1131/e90fa320d7/wind-breaker-2nd-kv.jpg/m/filters:quality(95)format(webp)" alt="WIND BREAKER">
+                    <h3>WIND BREAKER</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/e4e80c83c792d81c138e320874dbdffc.jpg" alt="JUJUTSU KAISEN">
+                    <h3>JUJUTSU KAISEN</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1504/c7214069da/blue-lock-season-2-key-visual.png/m/filters:quality(95)format(webp)" alt="BLUE LOCK">
+                    <h3>BLUE LOCK</h3>
+                    <p>Sub | Dub</p>
+                </div>
+            </div>
+
+            <button class="arrow right" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="sampler">
+        <h2 class="sampler-heading">Free Tamil & Telugu Dubbed Anime</h2>
+
+        <div class="carousel-container">
+            <button class="arrow left" id="prevBtn">&#10094;</button>
+
+            <div class="carousel" id="carousel">
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/960x1355/10a84fa91d/bye-bye-earth-key-visual.png/m/filters:quality(95)format(webp)" alt="Bye Bye, Earth">
+                    <h3>Bye Bye, Earth</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://eczisd5ctbt.exactdn.com/wordpress/wp-content/uploads/Dr.-STONE-NEW-WORLD-Key-Visual-2x3-1-jpg.webp?strip=all&lossy=0&ssl=1" alt="Dr. STONE">
+                    <h3>Dr. STONE</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Dandadan_KV.png" alt="Dandadan">
+                    <h3>Dandadan</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/640x960/69d722b284/bce2268826197c37c3988af77bb51c9a1672759722_main.png/m/filters:quality(95)format(webp)" alt="Tomo-chan Is a Girl">
+                    <h3>Tomo-chan Is a Girl</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/08c0e10608/demon-slayer-kimetsu-no-yaiba-hashira-training-arc-kv.jpg/m/filters:quality(95)format(webp)" alt="Demon Slayer: Kimetsu no Yaiba">
+                    <h3>Demon Slayer: Kimetsu no Yaiba</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/569x800/a9fdc8853d/8f8f18330e4e79a06901399f538d09271597587078_main.jpg/m/filters:quality(95)format(webp)" alt="Haikyu!!">
+                    <h3>Haikyu!!</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/7f6315794cec689a8ec5ff695788ea99.jpg" alt="A Couple of Cuckoos">
+                    <h3>A Couple of Cuckoos</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1280x1809/7f68d0c0df/frieren-beyond-journey-s-end-second-visual.jpg/m/filters:quality(95)format(webp)" alt="Frieren: Beyond Journey's End">
+                    <h3>Frieren: Beyond Journey's End</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1448x2048/fded7ae04c/35c60f741a4194db246c5c9b95fd4cd61679139956_main.jpg/m/filters:quality(95)format(webp)" alt="Mashle: Magic And Muscles">
+                    <h3>Mashle: Magic And Muscles</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/517x779/c217961e21/solo-leveling-reawakening-en-kv.jpg/m/filters:quality(95)format(webp)" alt="Solo Leveling">
+                    <h3>Solo Leveling</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/960x1440/13b507ce00/that-time-i-got-reincarnated-as-a-slime-season-3-base-assets-2x3.png/m/filters:quality(95)format(webp)" alt="That Time i Got Reincarnated as a Slime">
+                    <h3>That Time i Got Reincarnated as a Slime</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/1061x1500/5a05a2792f/shangri-la-frontier-season-2-key-visual.jpg/m/filters:quality(95)format(webp)" alt="Shangri La Frontier">
+                    <h3>shangri la frontier</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/650x939/e53395e696/sxf_kv4.jpeg/m/filters:quality(95)format(webp)" alt="SPY X FAMILY">
+                    <h3>SPY X FAMILY</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/7394dd442d/fire-force-season-3-key-art.png/m/filters:quality(95)format(webp)" alt="Fire Force">
+                    <h3>Fire Force</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card"><img src="https://a.storyblok.com/f/178900/640x913/ae7f5644c1/2713d54c9ce2391a84a8279dae7fda771568744491_full.png/m/640x913" alt="RADIANT">
+                    <h3>RADIANT</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1596/905ea6e912/the-apothecary-diaries-season-2-key-art.png/m/filters:quality(95)format(webp)" alt="The Apothecary Diaries">
+                    <h3>The Apothecary Diaries</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1280x1807/207a73c293/my-dress-up-darling-season-2-key-visual.jpg/m/filters:quality(95)format(webp)" alt="My Dress Up Darling">
+                    <h3>My Dress Up Darling</h3>
+                    <p>Sub | Dub</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://a.storyblok.com/f/178900/1064x1504/c7214069da/blue-lock-season-2-key-visual.png/m/filters:quality(95)format(webp)" alt="BLUE LOCK">
+                    <h3>BLUE LOCK</h3>
+                    <p>Sub | Dub</p>
+                </div>
+            </div>
+
+            <button class="arrow right" id="nextBtn">&#10095;</button>
+        </div>
+    </section>
+
+    <div class="anime-feature">
+        <div class="anime-image">
+            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/8b7f5847f9b97f921e41d4ef59fd2d79.jpg" alt="JUJUTSU KAISEN Poster">
+        </div>
+        <div class="anime-details">
+            <h2>JUJUTSU KAISEN</h2>
+            <p class="sub-info">Sub | Dub</p>
+            <p class="description">
+                JUJUTSU KAISEN is a serialized manga series with
+                story and artwork by Gege Akutami and published in Weekly Shonen Jump.
+                .....
+            </p>
+            <div class="anime-buttons">
+                <button class="watch-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                        <path d="M340-236.16v-487.68L723.07-480 340-236.16ZM400-480Zm0 134 210.77-134L400-614v268Z" />
+                    </svg>
+                    START WATCHING S1 E1
+                </button>
+                <button class="watchlist-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ff640a">
+                        <path d="M220-150v-597.69Q220-778 241-799q21-21 51.31-21h375.38Q698-820 719-799q21 21 21 51.31V-150L480-261.54 220-150Zm60-92 200-86 200 86v-505.69q0-4.62-3.85-8.46-3.84-3.85-8.46-3.85H292.31q-4.62 0-8.46 3.85-3.85 3.84-3.85 8.46V-242Zm0-518h400-400Z" />
+                    </svg>
+                    ADD TO WATCHLIST
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-bg">
+        <div class="news-wrapper">
+            <div class="news-header">
+                <div class="section-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                        <path d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm240-182v-196l-98 58H160v80h182l98 58Zm120 36v-268q27 24 43.5 58.5T620-480q0 41-16.5 75.5T560-346ZM300-480Z" />
+                    </svg>
+                    <h2>Crunchyroll News</h2>
+                </div>
+                <a href="#" class="calendar-link">View All &gt;</a>
+            </div>
+
+            <div class="news-content">
+                <div class="top-news">
+                    <h3>Top News</h3>
+                    <div class="news-item-large">
+                        <img src="https://a.storyblok.com/f/178900/1280x720/4972c19318/demon-slayer-infinity-castle-akaza-hero.png/m/1200x0/filters:quality(95)format(webp)" alt="Top News">
+                        <h4>Demon Slayer: Kimestu no Yaiba
+                            Infinity Castle Releases New "Battle
+                            Trailer" Featuring Tanjiro and Akaza</h4>
+                        <span class="date">Aug 10, 2025 12:54am GMT+5:30</span>
+                        <span class="author">by Kara Dennison</span>
+                    </div>
+                    <div class="news-item-large">
+                        <img src="https://a.storyblok.com/f/178900/1200x675/651c882a08/one-piece-nami-egghead-arc.jpg/m/1200x0/filters:quality(95)format(webp)" alt="Second Top News">
+                        <h4>ONE PIECE Heroines Anime Announced</h4>
+                        <span class="date">Aug 10, 2025 10:05am GMT+5:30</span>
+                        <span class="author">by Daryl Harding</span>
+                    </div>
+                </div>
+                <div class="latest-news">
+                    <h3>Latest</h3>
+                    <div class="news-list">
+                        <div class="news-item">
+                            <img src="https://a.storyblok.com/f/178900/1280x720/ed5afd698a/the-melancholy-of-haruhi-suzumiya-colorful-starting-line.png/m/1200x0/filters:quality(95)format(webp)" alt="latest-1">
+                            <div>
+                                <h4>The Melancholy of Haruhi Suzumiya Crowdfunding Project Reveals Third Music Video</h4>
+                                <span class="date">Aug 11, 2025 7:32pm GMT+5:30</span>
+                                <span class="author">by Kara Dennison</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="https://a.storyblok.com/f/178900/1460x822/2df33db4ff/the-all-devouring-whale-hero.png/m/1200x0/filters:quality(95)format(webp)" alt="latest-2">
+                            <div>
+                                <h4>The All-devouring Whale: Homecoming Donghua Adds Naruto VA Junko Takeuchi to Japanese Dub Cast</h4>
+                                <span class="date">Aug 11, 2025 7:26pm GMT+5:30</span>
+                                <span class="author">by Kara Dennison</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="https://a.storyblok.com/f/178900/1920x1080/1fb4d7c070/the-rising-of-the-shield-hero-season-3.jpg/m/1200x0/filters:quality(95)format(webp)" alt="latest-3">
+                            <div>
+                                <h4>The Rising of the Shield Hero Season 4 Anime Unveils New Raphtalia-Centric Key Visual</h4>
+                                <span class="date">Aug 11, 2025 7:26pm GMT+5:30</span>
+                                <span class="author">by Kara Dennison</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="https://a.storyblok.com/f/178900/960x540/bd0dfcc03b/haqshimero-tokihanate-mv.jpg/m/filters:quality(95)format(webp)" alt="latest-4">
+                            <div>
+                                <h4>Hashimero Shares WITCH WATCH Anime Second Cour Opening Song Music Video</h4>
+                                <span class="date">Aug 11, 2025 7:26pm GMT+5:30</span>
+                                <span class="author">by Kara Dennison</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="https://a.storyblok.com/f/178900/960x540/ed7442b1da/tatsuya-kitani-manazashi-mv.jpg/m/filters:quality(95)format(webp)" alt="latest-5">
+                            <div>
+                                <h4>Tatsuya Kitani Releases The Fragrant Flower Blooms with Dignity Anime Opening Song Music Video</h4>
+                                <span class="date">Aug 11, 2025 7:26pm GMT+5:30</span>
+                                <span class="author">by Kara Dennison</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="https://a.storyblok.com/f/178900/960x540/65f760a9ca/you-and-idol-precure-film-theme-song.jpg/m/filters:quality(95)format(webp)" alt="latest-6">
+                            <div>
+                                <h4>You and Idol Precure♪ Anime Film Theme Song Lyric Video Streamed</h4>
+                                <span class="date">Aug 11, 2025 7:26pm GMT+5:30</span>
+                                <span class="author">by Kara Dennison</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="still-looking">
+        <img src="https://www.crunchyroll.com/build/assets/img/home/yuzu@2x.png" class="img" />
+        <h3 class="still-text">Still looking for something to watch? <br /> Check out our full library</h3>
+        <button class="watchlist-btn">VIEW ALL</button>
+    </div>
+
+    <footer class="cr-footer">
+        <div class="footer-top">
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Browse Popular</a></li>
+                    <li><a href="#">Browse Simulcasts</a></li>
+                    <li><a href="#">Release Calendar</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Games</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <ul>
+                    <li><a href="#"><i class="fab fa-youtube"></i>Youtube</a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i>Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-x-twitter"></i>X</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-tiktok"></i>TIktok</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Crunchyroll</h4>
+                <ul>
+                    <li><a href="#"><span>Start a Free Trial</span></a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Content Feedback</a></li>
+                    <li><a href="#">AdChoices</a></li>
+                    <li><a href="#">Do Not Sell or <br /> Share My Personal Information</a></li>
+                    <li><a href="#">Cookie Constent Tool</a></li>
+                    <li><a href="#">Press Inquries</a></li>
+                    <li><a href="#">Advertising Inquries</a></li>
+                    <li><a href="#">Get The Apps</a></li>
+                    <li><a href="#">Redeem Gift Card</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="#">Create Account</a></li>
+                    <li><a href="#">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-info">
+                <p><strong>SONY PICTURES</strong> | © Crunchyroll, LLC</p>
+                <div class="language-select">
+                    <select>
+                        <option>English (US)</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="pt">Português</option>
+                        <option value="it">Italiano</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                        <option value="ko">한국어</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
+            </div>
+            <p class="footer-desc">
+                Welcome to Crunchyroll, your ultimate destination for streaming anime and the best in anime entertainment.
+                Whether you're a lifelong fan or just starting your anime journey, Crunchyroll offers an extensive library of top-tier anime series and anime movies...
+            </p>
+            <a class="more-details" href="#">MORE DETAILS</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
